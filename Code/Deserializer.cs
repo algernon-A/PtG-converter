@@ -70,16 +70,29 @@ namespace PlopTheGrowables
 		/// </summary>
 		public static void LoadData()
 		{
-			try
+			// First, check to see if Plop the Growables is also loaded.
+			Loading.ptgDetected = ModUtils.IsPtGInstalled();
+
+			// Only proceed if Plop the Growables isn't active.
+			if (!Loading.ptgDetected)
 			{
-				Logging.Message("attempting to load Plop the Growables savegame data");
-				byte[] array = Singleton<SimulationManager>.instance.m_SerializableDataWrapper.LoadData("PLOP_THE_GROWABLES_ID");
-				MemoryStream stream = new MemoryStream(array);
-				DataSerializer.Deserialize<PlopTheGrowablesDataContainer>(stream, DataSerializer.Mode.Memory);
-			}
-			catch (Exception exception)
-			{
-				Logging.LogException(exception, "exception loading Plop the Growables savegame data");
+				try
+				{
+					Logging.Message("attempting to load Plop the Growables savegame data");
+					byte[] array = Singleton<SimulationManager>.instance.m_SerializableDataWrapper.LoadData("PLOP_THE_GROWABLES_ID");
+					MemoryStream stream = new MemoryStream(array);
+					DataSerializer.Deserialize<PlopTheGrowablesDataContainer>(stream, DataSerializer.Mode.Memory);
+
+					// Set flag to indicate successful loading.
+					Loading.dataLoaded = true;
+				}
+				catch (Exception exception)
+				{
+					Logging.LogException(exception, "exception loading Plop the Growables savegame data");
+
+					// Set flag to indicate unsuccessful loading.
+					Loading.dataLoaded = false;
+				}
 			}
 		}
 	}

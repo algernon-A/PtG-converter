@@ -49,7 +49,41 @@ namespace PlopTheGrowables
             }
 
             // If we got here, we were unsuccessful.
-            Logging.Message("Advanced Building Level Control not found");
+            Logging.Error("Advanced Building Level Control not found");
+        }
+
+
+        /// <summary>
+        ///  Checks for the Plop the Growables mod, as distinct from the PtG converter.
+        /// </summary>
+        /// <returns>True if the original Plop the Growables mod is installed and active, false otherwise</returns>
+        internal static bool IsPtGInstalled()
+        {
+            // Iterate through the full list of plugins.
+            foreach (PluginManager.PluginInfo plugin in PluginManager.instance.GetPluginsInfo())
+            {
+                foreach (Assembly assembly in plugin.GetAssemblies())
+                {
+                    // Looking for an assembly named "PlopTheGrowables" that's active.
+                    if (assembly.GetName().Name.Equals("PlopTheGrowables") && plugin.isEnabled)
+                    {
+                        // Found one - is this the converter mod class?
+                        if (!plugin.userModInstance.GetType().ToString().Equals("PlopTheGrowables.PtGReaderMod"))
+                        {
+                            // Not converter mod class - assume it's the original.
+                            return true;
+                        }
+                        else
+                        {
+                            // Converter mod class - log and continue.
+                            Logging.Message("found Plop the Growables converter");
+                        }
+                    }
+                }
+            }
+
+            // If we got here, no active PtG was detected.
+            return false;
         }
     }
 }

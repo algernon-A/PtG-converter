@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Language UniqueName="en" ReadableName="English">
+  <Translations>
+    <Translation ID="PGC_NAME" String="PtG Converter" />
+    <Translation ID="PGC_DESC" String="Converts Plop the Growables plopped building level-locking settings to Advanced Building Level Control settings" />
+    <Translation ID="TRN_CHOICE" String="Set language" />
+    <Translation ID="TRN_SYS" String="Use system language" />
+    <Translation ID="MES_CLS" String="Close" />
+    <Translation ID="MES_DSA" String="Don't show again" />
+    <Translation ID="MES_PAGE" String="Please refer to the mod's Steam Workshop page for further information." />
+    <Translation ID="PGC_PTG0" String="An active instance of the Plop the Growables mod was detected." />
+    <Translation ID="PGC_PTG1" String="PtG converter is not able to read data saved by Plop the Growables if the original mod is still operating." />
+    <Translation ID="PGC_PTG2" String="Please exit the game, unsubscribe from Plop the Growables, and restart the game to try again." />
+    <Translation ID="PGC_ERR_DSZ" String="PtG converter was not able to properly read data saved by Plop the Growables. It is possible that your savegame data has been corrupted." />
+    <Translation ID="PGC_ERR_FAT" String="This means that the mod is not able to operate, and has shut down." />
+    <Translation ID="PGC_ERR_HAR" String="PtG Converter was unable to complete its required Harmony patches." />
+    <Translation ID="ERR_HAR0" String="Harmony patching error" />
+    <Translation ID="ERR_HAR1" String="Possible causes of this problem include:" />
+    <Translation ID="ERR_HAR2" String="The required Harmony 2 mod dependency was not installed" />
+    <Translation ID="ERR_HAR3" String="An old and/or broken mod is preventing Harmony 2 from operating properly" />
+  </Translations>
+</Language>

@@ -13,7 +13,7 @@ namespace PlopTheGrowables
         public static string Version => "0.1";
 
         public string Name => ModName + " " + Version;
-        public string Description => "Converts Plop the Growables savegame data to Advanced Building Level Control settings.";
+        public string Description => Translations.Translate("PGC_DESC");
 
 
         /// <summary>

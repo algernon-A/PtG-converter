@@ -66,8 +66,8 @@
     <Compile Include="Code\Patches\LoadingPatch.cs" />
     <Compile Include="Code\Patches\Patcher.cs" />
     <Compile Include="Code\Utils\UIControls.cs" />
-    <Compile Include="Code\MessageBox\ListMessageBox.cs" />
-    <Compile Include="Code\MessageBox\MessageBoxBase.cs" />
+    <Compile Include="Code\Notifications\ListMessageBox.cs" />
+    <Compile Include="Code\Notifications\MessageBoxBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Code\Deserializer.cs" />
   </ItemGroup>

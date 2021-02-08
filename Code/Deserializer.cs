@@ -45,7 +45,10 @@ namespace PlopTheGrowables
 				buildingList = new List<ushort>();
 
 				// Iterate through all building IDs stored in savegame.
-				for (int i = 0; i < serializer.ReadInt32(); ++i)
+				int dataCount = serializer.ReadInt32();
+				Logging.Message("PtG datacount is ", dataCount.ToString());
+
+				for (int i = 0; i < dataCount; ++i)
 				{
 					// Read building ID and add to list.
 					ushort buildingID = (ushort)serializer.ReadInt32();
@@ -80,6 +83,15 @@ namespace PlopTheGrowables
 				{
 					Logging.Message("attempting to load Plop the Growables savegame data");
 					byte[] array = Singleton<SimulationManager>.instance.m_SerializableDataWrapper.LoadData("PLOP_THE_GROWABLES_ID");
+
+					// Don't try to do anything with null data.
+					if (array == null)
+                    {
+						return;
+                    }
+
+					Logging.Message("read ", array.Length.ToString(), " bytes");
+
 					MemoryStream stream = new MemoryStream(array);
 					DataSerializer.Deserialize<PlopTheGrowablesDataContainer>(stream, DataSerializer.Mode.Memory);
 

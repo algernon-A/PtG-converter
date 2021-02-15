@@ -41,9 +41,6 @@ namespace PlopTheGrowables
 			{
 				Logging.Message("Deserializing Plop the Growables savegame data");
 
-				// Initialize list.
-				buildingList = new List<ushort>();
-
 				// Iterate through all building IDs stored in savegame.
 				int dataCount = serializer.ReadInt32();
 				Logging.Message("PtG datacount is ", dataCount.ToString());
@@ -79,6 +76,9 @@ namespace PlopTheGrowables
 			// Only proceed if Plop the Growables isn't active.
 			if (!Loading.ptgDetected)
 			{
+				// Initialize list.
+				buildingList = new List<ushort>();
+
 				try
 				{
 					Logging.Message("attempting to load Plop the Growables savegame data");
@@ -87,6 +87,8 @@ namespace PlopTheGrowables
 					// Don't try to do anything with null data.
 					if (array == null)
                     {
+						// Set flag to indicate succesful loading of data (there was just none).
+						Loading.dataLoaded = true;
 						return;
                     }
 

@@ -1,0 +1,3 @@
+﻿Version 1.0.1 -
+
+- Suppress error message when no Plop the Growables data found

@@ -10,7 +10,7 @@ namespace PlopTheGrowables
     public class PtGReaderMod : IUserMod
     {
         public static string ModName => "Plop the Growables data converter ";
-        public static string Version => "0.1";
+        public static string Version => "1.0.1";
 
         public string Name => ModName + " " + Version;
         public string Description => Translations.Translate("PGC_DESC");

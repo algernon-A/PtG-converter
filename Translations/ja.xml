@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Language UniqueName="ja" ReadableName="日本語">
+  <Translations>
+    <Translation ID="PGC_NAME" String="PtG Converter"/>
+    <Translation ID="PGC_DESC" String="Plop the Growables MODで設置した建物レベルのロック情報を、Advanced Building Level Controlの設定へ変換します"/>
+    <Translation ID="TRN_CHOICE" String="言語設定"/>
+    <Translation ID="TRN_SYS" String="システム言語を使用"/>
+    <Translation ID="MES_CLS" String="閉じる"/>
+    <Translation ID="MES_DSA" String="次回から非表示"/>
+    <Translation ID="MES_PAGE" String="詳細は、MODがあるSteamのワークショップを確認してください。"/>
+    <Translation ID="PGC_PTG0" String="Plop the Growablesにある、有効なインスタンス情報が検出されました"/>
+    <Translation ID="PGC_PTG1" String="Plop the Growablesが動作中の場合は、PtG converterから保存されたデータを読み取ることができません。 "/>
+    <Translation ID="PGC_PTG2" String="ゲームを終了して、Plop the Growablesのサブスクライブを解除後に再試行してください"/>
+    <Translation ID="PGC_ERR_DSZ" String="PtG converterは 、Plop the Growablesで保存されたデータを正常に読み取れません。セーブデータが破損している可能性があります。"/>
+    <Translation ID="PGC_ERR_FAT" String="正常にMODが起動できないため、動作をシャットダウンしました。"/>
+    <Translation ID="PGC_ERR_HAR" String="PtG Converterは、必要なHarmony 2.0 MODのパッチ動作を完了できません。"/>
+    <Translation ID="ERR_HAR0" String="Harmony 2.0 MODでエラーが発生しました"/>
+    <Translation ID="ERR_HAR1" String="エラーが起きる原因として、考えられるのは以下の通りです。"/>
+    <Translation ID="ERR_HAR2" String="依存関係にある、必要なHarmony 2 MODがインストールされていません。"/>
+    <Translation ID="ERR_HAR3" String="古いMODや壊れたMODが、Harmony 2.0 MODの動作を妨げています。"/>
+  </Translations>
+</Language>

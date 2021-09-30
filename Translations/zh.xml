@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Language UniqueName="zh" ReadableName="简体中文">
+  <Translations>
+    <Translation ID="PGC_NAME" String="PtG转换器" />
+    <Translation ID="PGC_DESC" String="转换Plop the Growables建筑级别设置到Advanced Building Level Control设置" />
+    <Translation ID="TRN_CHOICE" String="语言设定" />
+    <Translation ID="TRN_SYS" String="使用游戏默认语言" />
+    <Translation ID="MES_CLS" String="关闭" />
+    <Translation ID="MES_DSA" String="不再显示" />
+    <Translation ID="MES_PAGE" String="请前往创意工坊该模组页面了解详细信息。" />
+    <Translation ID="PGC_PTG0" String="检测到Plop the Growables模组" />
+    <Translation ID="PGC_PTG1" String="如果原始mod仍在运行，PtG转换器无法读取由Plop the Growables保存的数据。" />
+    <Translation ID="PGC_PTG2" String="请退出游戏，取消订阅Plop the Growables，并重新启动游戏再次尝试。" />
+    <Translation ID="PGC_ERR_DSZ" String="PtG转换器无法正确读取由Plop the Growables保存的数据，有可能你的存档数据已经损坏。" />
+    <Translation ID="PGC_ERR_FAT" String="这意味着该mod无法操作，并已关闭。" />
+    <Translation ID="PGC_ERR_HAR" String="PtG转换器无法调用前置Harmony。" />
+    <Translation ID="ERR_HAR0" String="Harmony调用失败" />
+    <Translation ID="ERR_HAR1" String="造成该问题的原因可能是：" />
+    <Translation ID="ERR_HAR2" String="Harmony 2 mod dependency模组并未订阅或未启用" />
+    <Translation ID="ERR_HAR3" String="存在一个旧/损坏的模组阻止Harmony 2的调用" />
+  </Translations>
+</Language>
